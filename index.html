@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo list</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>Todo List</nav>
+  <aside>
+    <div class="dates">
+      <button id="today">Today</button>
+      <button id="week">This Week</button>
+      <button id="month">This Month</button>
+    </div>
+    <h2>Projects</h2>
+    <div class="projects">
+      <button id="addProject">+add project</button>
+    </div>
+  </aside>
+  <main>
+    <h1 id="name">Today</h1>
+    <button id="addTask">+add task</button>
+    <div class="tasks"></div>
+  </main>
+  <div id="prompt">
+    <h1>Add new task</h1>
+    <input type="text" placeholder="Title:pay bills" id="newTitle">
+    <input type="date" id="newDate">
+    <button id="newAddTesk">add task</button>
+  </div>
+  <div id="Projectprompt">
+    <h1>Add new project</h1>
+    <input type="text" placeholder="new project name" id="newTitle">
+    <button id="newAddProject">add project</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

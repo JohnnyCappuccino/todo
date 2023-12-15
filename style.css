@@ -1,0 +1,237 @@
+/* Whisper Roboto Mono*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Whisper&display=swap');
+
+*{
+  padding:0;
+  margin: 0;
+  font-family: Roboto Mono;
+}
+
+body{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+}
+
+nav{
+  background-color: rgb(32, 32, 32);
+  color: burlywood;
+  font-size: 50px;
+  width: 100%;
+}
+
+/*Aside*/
+.dates>*,#addProject,#project{
+  color: black;
+  background-color: burlywood;
+  border-style: solid;
+  border-color: black;
+  transition: 0.5s;
+}
+
+.dates>*:hover,#addProject:hover,#project:hover{
+  color: white;
+  background-color: rgb(169, 120, 55);
+  border-style: solid;
+  border-color: white;
+  height: 30px;
+  width:120%;
+}
+
+.dates,.projects{
+  display: flex;
+  flex-direction:column;
+  width: 50%;
+  gap: 10px;
+}
+
+aside{
+  background-color:burlywood;
+  display: flex;
+  flex-direction:column;
+  justify-content: top;
+  align-items: center;
+  padding-top: 20px;
+  gap: 10px;
+  height: 100vh;
+  flex: 1;
+  
+}
+
+/*Main*/
+main{
+  background-color:rgb(169, 120, 55);
+  border-left-style: solid;
+  border-left-color:black;
+  flex: 4;
+}
+
+main >*{
+  padding:20px;
+}
+
+.tasks{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#addTask{
+background-color: burlywood;
+border-style: solid;
+border-color:black;
+border-radius:3px;
+padding: 0;
+height: 40px;
+width: 10%;
+margin-left: 20px;
+transition:0.5s;
+}
+
+#addTask:hover{
+  color: white;
+  background-color: rgb(169, 120, 55);
+  border-color: white;
+}
+
+/*Task*/
+.task{
+  display: flex;
+  background-color:burlywood;
+  color: black;
+  justify-content: space-around;
+  border-radius: 3px;
+  height: 40px;
+  width: 50%;
+  align-items: center;
+  border-style: solid;
+  border-color: black;
+
+}
+
+.task >*{
+  padding: 20px;
+  display: flex;
+  gap: 5px;
+  overflow: hidden;
+  flex: 2;
+}
+
+.task>:last-child{
+  flex: 1;
+}
+
+.task >:last-child>button{
+  width: 20px;
+  background-image: url(pictures/x.jpg);
+  background-position: center;
+  background-size:cover;
+  border-style: solid;
+  border-color:black
+}
+
+/*prompt*/
+#prompt,#Projectprompt{
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+  background-color: burlywood;
+  border-style: solid;
+  left: 40%;
+  top: 20%;
+}
+
+#prompt>input ,#Projectprompt>input{
+  padding:10px;
+  margin: 10px;
+}
+
+#prompt>button ,#Projectprompt>button{
+  padding:10px;
+  margin: 10px;
+  background-color: burlywood;
+border-style: solid;
+border-color:black;
+transition:0.5s;
+}
+
+#prompt>button:hover ,#Projectprompt>button:hover{
+  color: white;
+  background-color: rgb(169, 120, 55);
+  border-color: white;
+}
+
+#prompt>h1,#Projectprompt>h1{
+  background-color: black;
+  color: burlywood;
+  padding:10px;
+}
+
+/*resize*/
+@media only screen and (max-width: 600px) {
+  body{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction:column;
+    height: 100vh;
+  }
+  
+  nav{
+    background-color: rgb(32, 32, 32);
+    color: burlywood;
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+  }
+
+  aside{
+    background-color:burlywood;
+    display: flex;
+    flex-direction:column;
+    justify-content: top;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 10px;
+    flex: 1;
+  }
+
+  main{
+    background-color:rgb(169, 120, 55);
+    border-top-style: solid;
+    border-top-color:black;
+    border-left: none;
+    flex: 2;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    
+  }
+
+  .tasks{
+    width: 90%;
+  }
+
+  .task{
+    height: 40px;
+    width: 100%;
+  }
+
+  .task >*{
+    padding: 20px;
+    display: flex;
+    gap: 5px;
+    overflow: hidden;
+    flex: 1;
+  }
+
+  #prompt{
+    left: 22%;
+  }
+
+  #addTask{
+    height: 40px;
+    width: 50%;
+    }
+  }
